@@ -110,7 +110,19 @@ lspconfig["cssmodules_ls"].setup({
 lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	cmd={"gopls"},
+	filetypes={"go", "gomod", "gowork", "gotmpl"},
+	settings = {
+		gopls = {
+			usePlaceholders = true,
+		},
+	},
 })
+
+-- lspconfig["dockerfile-language-server"].set({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 
 -- Change the Diagnostic symbols in the sign column (gutter)
 -- (not in youtube nvim video)

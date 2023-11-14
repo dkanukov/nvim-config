@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/dkanukov/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gopher.nvim"] = {
+    loaded = true,
+    path = "/Users/dkanukov/.local/share/nvim/site/pack/packer/start/gopher.nvim",
+    url = "https://github.com/olexsmir/gopher.nvim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/Users/dkanukov/.local/share/nvim/site/pack/packer/start/gruvbox-material",
