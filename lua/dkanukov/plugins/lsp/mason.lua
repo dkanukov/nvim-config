@@ -20,36 +20,4 @@ mason.setup({
 	PATH = "prepend",
 })
 
-mason_lspconfig.setup({
-	-- 	ensure_installed = {
-	-- 		"tsserver",
-	-- 		"html",
-	-- 		"cssls",
-	-- 		"bashls",
-	-- 		"denols",
-	-- 		"dockerls",
-	-- 		"docker_compose_language_service",
-	-- 		"eslint",
-	-- 		"golangci_lint_ls",
-	-- 		"golsp",
-	-- 		"jsonls",
-	-- 		"quick_lint_js",
-	-- 		"vtsls",
-	-- 		"rust_analyzer",
-	-- 		"vtsls",
-	-- 		"volar",
-	-- 		"vuels",
-	-- 		"sumneko_lua",
-	-- 	},
-})
-
--- mason_null_ls.setup({
--- 	-- list of formatters & linters for mason to install
--- 	ensure_installed = {
--- 		"prettier", -- ts/js formatter
--- 		"stylua", -- lua formatter
--- 		"eslint_d", -- ts/js linter
--- 	},
--- 	-- auto-install configured formatters & linters (with null-ls)
--- 	automatic_installation = true,
--- })
+mason_lspconfig.setup({})
