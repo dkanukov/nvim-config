@@ -119,10 +119,20 @@ lspconfig["gopls"].setup({
 	},
 })
 
--- lspconfig["dockerfile-language-server"].set({
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- })
+lspconfig["dockerls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["docker_compose_language_service"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["sqlls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
 
 -- Change the Diagnostic symbols in the sign column (gutter)
 -- (not in youtube nvim video)

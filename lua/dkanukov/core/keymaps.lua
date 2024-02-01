@@ -50,5 +50,3 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- language server
 keymap.set("n", "<leader>vh", "<cmd>lua vim.lsp.buf.hover()<cr>")
 
---terminal
-keymap.set("n", "<C-`>", "<cmd>ToggleTerm direction=vertical size=40<cr>")

@@ -31,9 +31,6 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim")
-
-	use({ "catppuccin/nvim", as = "catppuccin" })
-
 	use("christoomey/vim-tmux-navigator")
 
 	use("szw/vim-maximizer")
@@ -67,7 +64,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		branch = "main",
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },
@@ -93,8 +90,6 @@ return packer.startup(function(use)
 
 	use("lewis6991/gitsigns.nvim")
 
-	use("preservim/tagbar")
-
 	use("lukas-reineke/indent-blankline.nvim")
 
 	use({
@@ -108,27 +103,30 @@ return packer.startup(function(use)
 		"simrat39/rust-tools.nvim",
 	})
 
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
-
 	use({ "sainnhe/gruvbox-material" })
-	
-	use({
+	use({ "folke/tokyonight.nvim" })
+
+	use 'mfussenegger/nvim-dap'
+
+	use ({
 		"olexsmir/gopher.nvim",
-		-- config = function(_, opts)
-		-- 	require("gopher").setup(opts)
-		-- end,
-		--
-		-- build = function() 
-		-- 	vim.cmd [[GoInstallDeps]]
-		-- end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
 	})
 
+	use({ "folke/todo-comments.nvim" })
+
+	use {
+    	"ThePrimeagen/harpoon",
+    	branch = "harpoon2",
+    	requires = { {"nvim-lua/plenary.nvim"} }
+	}
+
+	-- use 'xiyaowong/transparent.nvim'
+
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	if packer_bootstrap then
 		require("packer").sync()

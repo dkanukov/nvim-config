@@ -16,3 +16,6 @@ require("dkanukov.plugins.treesitter")
 require("dkanukov.plugins.gitsigns")
 require("dkanukov.plugins.blankline")
 require("dkanukov.plugins.rust-tools")
+require("dkanukov.plugins.todo-comments")
+require("dkanukov.plugins.gopher")
+

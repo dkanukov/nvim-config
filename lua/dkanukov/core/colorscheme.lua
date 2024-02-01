@@ -1,16 +1,19 @@
-local _, catppuccin = pcall(require, "catppuccin")
-
--- catppuccin.setup({
--- 	transparent_background = true,
+-- require("catppuccin").setup({
+-- 	flavour = "mocha",
+-- 	transparent_background = true
 -- })
 --
--- local status, _ = pcall(vim.cmd, "colorscheme catppuccin-mocha")
---
--- if not status then
--- 	print("no such colorcheme")
--- 	return
+-- vim.cmd[[colorscheme catppuccin]]
 
-local _, gruvbox = pcall(require, "gruvbox-material")
+-- NOTE: Tokyo setup
 
-pcall(vim.cmd, "g:gruvbox_material_background = 'soft'")
-local _, _ = pcall(vim.cmd, "colorscheme gruvbox-material")
+require("tokyonight").setup({
+	transparent = true,
+	styles = {
+		sidebars = "transparent",
+		floats = "transparent",
+	},
+})
+
+
+vim.cmd[[colorscheme tokyonight-night]]
