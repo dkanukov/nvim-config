@@ -118,14 +118,6 @@ return packer.startup(function(use)
 
 	use({ "folke/todo-comments.nvim" })
 
-	use {
-    	"ThePrimeagen/harpoon",
-    	branch = "harpoon2",
-    	requires = { {"nvim-lua/plenary.nvim"} }
-	}
-
-	-- use 'xiyaowong/transparent.nvim'
-
 	use { "catppuccin/nvim", as = "catppuccin" }
 
 	if packer_bootstrap then

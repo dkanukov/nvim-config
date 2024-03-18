@@ -134,6 +134,11 @@ lspconfig["sqlls"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["lua_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- Change the Diagnostic symbols in the sign column (gutter)
 -- (not in youtube nvim video)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
