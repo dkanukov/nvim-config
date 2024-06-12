@@ -1,0 +1,3 @@
+-- require("indentmini").setup()
+-- vim.cmd.highlight('IndentLine guifg=#123456')
+-- vim.cmd.highlight('IndentLineCurrent guifg=#123456')
