@@ -19,8 +19,7 @@ return require("packer").startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	use("nvimdev/indentmini.nvim")
-	-- TODO: fzf?
+	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
