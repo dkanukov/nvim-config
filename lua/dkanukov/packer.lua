@@ -39,6 +39,11 @@ return require("packer").startup(function(use)
 		as = "rose-pine",
 	})
 
+	use({
+		"sainnhe/gruvbox-material",
+		as = "gruvbox",
+	})
+
 	use({"nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true }})
 
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
