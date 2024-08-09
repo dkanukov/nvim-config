@@ -70,4 +70,6 @@ return require("packer").startup(function(use)
 	use("jayp0521/mason-null-ls.nvim")
 	use("nvimtools/none-ls-extras.nvim")
 	use("gbprod/none-ls-shellcheck.nvim")
+
+	use("folke/zen-mode.nvim")
 end)
