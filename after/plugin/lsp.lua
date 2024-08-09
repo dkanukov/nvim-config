@@ -41,6 +41,7 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"lua_ls",
 		"rust_analyzer",
+		"bashls",
 		"typos_lsp",
 	},
 	handlers = {
@@ -118,5 +119,3 @@ null_ls.setup({
 		vim.keymap.set("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format()<cr>")
 	end,
 })
-
-
