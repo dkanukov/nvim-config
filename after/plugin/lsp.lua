@@ -1,6 +1,6 @@
 local lsp_zero = require("lsp-zero")
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 	vim.keymap.set("n", "<leader>vh", "<cmd>lua vim.lsp.buf.hover()<cr>")
 	vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>")
@@ -31,7 +31,9 @@ cmp.setup({
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"tsserver",
+		-- Deprecated
+		-- "tsserver",
+		"vtsls",
 		"volar",
 		"cssls",
 		"css_variables",
@@ -74,7 +76,7 @@ require("mason-lspconfig").setup({
 				})
 			elseif server_name == "eslint" then
 				lspconfig[server_name].setup({
-					on_attach = function(client, buffer)
+					on_attach = function(_, buffer)
 						vim.api.nvim_create_autocmd("BufWritePre", {
 							buffer = buffer,
 							command = "EslintFixAll",
@@ -115,7 +117,7 @@ null_ls.setup({
 		require("none-ls-shellcheck.code_actions"),
 	},
 
-	on_attach = function(current_client, bufnr)
+	on_attach = function()
 		vim.keymap.set("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format()<cr>")
 	end,
 })
