@@ -31,8 +31,6 @@ cmp.setup({
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		-- Deprecated
-		-- "tsserver",
 		"vtsls",
 		"volar",
 		"cssls",
