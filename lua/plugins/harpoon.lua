@@ -37,14 +37,8 @@ return {
 require("telescope.pickers").new({}, {
         prompt_title = "Harpoon",
         finder = finder(),
-        previewer = false,
+		previewer = conf.file_previewer({}),
         sorter = require("telescope.config").values.generic_sorter({}),
-        layout_config = {
-            height = 0.4,
-            width = 0.5,
-            prompt_position = "top",
-            preview_cutoff = 120,
-        },
         attach_mappings = function(prompt_bufnr, map)
             map("i", "<C-d>", function()
                 local state = require("telescope.actions.state")
