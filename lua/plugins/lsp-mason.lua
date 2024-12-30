@@ -1,13 +1,13 @@
 return {
-    "neovim/nvim-lspconfig",
-	dependencies= {
+	"neovim/nvim-lspconfig",
+	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"williamboman/mason.nvim",
-		"VonHeikemen/lsp-zero.nvim"
+		"VonHeikemen/lsp-zero.nvim",
 	},
 
-	config = function ()
-		require("mason").setup({})
+	config = function()
+		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"vtsls",
@@ -26,8 +26,10 @@ return {
 			handlers = {
 				function(server_name)
 					local lspconfig = require("lspconfig")
+					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					if server_name == "rust_analyzer" then
 						lspconfig[server_name].setup({
+							capabilities = capabilities,
 							filetypes = { "rust" },
 							settings = {
 								["rust-analyzer"] = {
@@ -53,6 +55,7 @@ return {
 						})
 					elseif server_name == "eslint" then
 						lspconfig[server_name].setup({
+							capabilities = capabilities,
 							on_attach = function(_, buffer)
 								vim.api.nvim_create_autocmd("BufWritePre", {
 									buffer = buffer,
@@ -61,7 +64,9 @@ return {
 							end,
 						})
 					else
-						lspconfig[server_name].setup({})
+						lspconfig[server_name].setup({
+							capabilities = capabilities,
+						})
 					end
 				end,
 			},
@@ -75,5 +80,5 @@ return {
 			vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 			vim.keymap.set("n", "<leader>df", "<cmd>lua vim.diagnostic.open_float()<cr>")
 		end)
-	end
+	end,
 }
