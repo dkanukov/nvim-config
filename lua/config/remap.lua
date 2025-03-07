@@ -35,4 +35,5 @@ keymap.set("n", "<leader>sx", ":close<CR>")
 keymap.set("n", "<leader>qc", ":cclose<CR>")
 
 --Tree
--- keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>")
+-- keymap.set("n", "<leader>tt", ":Neotree toggle<CR>")
+-- keymap.set("n", "<leader>tt", ":Explore<CR>")
