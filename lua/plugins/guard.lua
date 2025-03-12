@@ -12,6 +12,11 @@ return {
 
 		ft("lua"):fmt("lsp"):append("stylua"):lint("luacheck")
 		ft("typescript,javascript,typescriptreact,css"):fmt("lsp"):append("prettierd"):lint("eslint_d")
-		-- ft("css"):fmt("lsp"):append("eslint_d"):lint("prettierd")
+		ft("*"):lint("codespell")
+
+		require("guard").setup({
+			fmt_on_save = true,
+			lsp_as_default_formatter = false,
+		})
 	end,
 }

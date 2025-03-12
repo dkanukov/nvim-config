@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	config = function ()
+	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = { "javascript", "typescript", "lua", "rust", "go", "tsx", "bash", "html" },
 
@@ -15,7 +15,13 @@ return {
 
 			autotag = {
 				enable = true,
-			}
+			},
+
+			textObjects = {
+				select = {
+					enable = false,
+				},
+			},
 		})
-	end
+	end,
 }

@@ -79,6 +79,7 @@ return {
 			vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>")
 			vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 			vim.keymap.set("n", "<leader>df", "<cmd>lua vim.diagnostic.open_float()<cr>")
+			vim.keymap.set("n", "<leader>fm", ":LspZeroFormat<cr>")
 		end)
 	end,
 }
