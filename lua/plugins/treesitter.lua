@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "javascript", "typescript", "lua", "rust", "go", "tsx", "bash", "html" },
+			ensure_installed = { "javascript", "typescript", "lua", "rust", "go", "tsx", "bash", "html", "yaml" },
 
 			sync_install = false,
 
