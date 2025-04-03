@@ -1,6 +1,6 @@
 return {
 	"sainnhe/gruvbox-material",
-	config = function ()
+	config = function()
 		vim.g.gruvbox_material_foreground = "material"
 
 		--background option can be hard, medium, soft
@@ -12,5 +12,22 @@ return {
 		vim.g.gruvbox_material_transparent_background = 1
 
 		vim.cmd([[colorscheme gruvbox-material]])
-	end
+	end,
 }
+
+-- return {
+-- 	"rose-pine/neovim",
+-- 	name = "rose-pine",
+-- 	config = function()
+-- 		require("rose-pine").setup({
+-- 			variant = "main",
+-- 			styles = {
+-- 				bold = true,
+-- 				italic = true,
+-- 				transparency = true,
+-- 			},
+-- 		})
+--
+-- 		vim.cmd("colorscheme rose-pine")
+-- 	end,
+-- }
